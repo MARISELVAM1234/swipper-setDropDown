@@ -1,0 +1,218 @@
+1.video player :
+const [play , setPlay ] = useState(false)
+
+
+const playHandler = () => {
+   if (play) {
+      setPlay(false)
+      document.querySelector('.video-component').pause()
+   } else {
+      setPlay(true)
+      document.querySelector('.video-component').play()
+   }
+}
+
+   {Object.entries(resultData)?.length > 0 && (
+
+                      <div className="video-section mt-4">
+
+                        <div className="d-flex justify-content-center ">
+
+                          <video
+
+                            width="100%"
+
+                            poster="/images/atomFibraFrame.png"
+
+                            onClick={playHandler}
+
+                            autoPlay={false}
+
+                            className={"video-component"}
+
+                          >
+
+                            <source src={resultData.video} type="video/mp4" />
+
+                          </video>
+
+                        </div>
+                          {play === false && (
+
+                          <div className="video-btn">
+
+                            <Image
+
+                              src={VideoBtn}
+
+                              alt={"storeMap"}
+
+                              layout={"fixed"}
+
+                              width={isDesktopOrLaptop ? 55 : 35}
+
+                              height={isDesktopOrLaptop ? 55 : 35}
+
+                              onClick={playHandler}
+
+                            ></Image>
+
+                          </div>
+
+                        )}
+
+                      </div>
+
+                    )}
+                    
+                    
+                    
+                    
+ 2. hide dropdown arrow to set customize dropdown arrow in select box in css
+  select {
+    background: #ffffff;
+    width: 100%;
+    height: 36px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    border: none;
+    padding: 2px 16px;
+    font-family: "Lato";
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+
+  }
+
+  select {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .select-wrapper {
+    position: relative;
+  }
+
+  .select-wrapper::after {
+    content: "";
+    background-image: url("/images/dropDown.png");
+    background-repeat: no-repeat;
+    width: 29px;
+    height: 17px;
+    top: 40%;
+    right: 10%;
+    position: absolute;
+  }
+  select:focus-visible {
+    outline: none;
+  }
+            
+            
+3.swipper carousel cutomizing  
+
+ .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+      
+    display: none;
+}
+.swiper-button-next {
+  background-image: url("/images/right-arro.png");
+}
+.swiper-button-prev {
+  background-image: url("/images/left-arrow.png");
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 64px;
+  height: 64px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}    
+  .swiper {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+    
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    } 
+    
+    
+ 4.input box and search button in join
+ 
+ <div className="d-flex align-item-baseline input-wrapper">
+
+
+
+                        <input
+
+                            type="text"
+
+                            placeholder="Enter pincode"
+
+                            className="border-0"
+
+                        />
+
+                        <button
+
+                            className="border-0 pe-4"
+
+                        >
+
+
+
+                            <div className="d-flex align-item-baseline">
+
+                                <Image
+
+                                    src={pageData.search_icon.icon}
+
+                                    alt={"search-icon"}
+
+                                    layout={"fixed"}
+
+                                    width={21}
+
+                                    height={21}
+
+                                    priority={true}
+
+                                    className='ps-1'
+
+                                />
+
+                                <span className="ps-2">Locate</span>
+
+                            </div>
+
+
+
+                        </button>
+
+
+
+                    </div>   
